@@ -1,0 +1,227 @@
+# HR Analytics Power BI Dashboard
+
+## Project Overview
+
+This project is an interactive **HR Analytics Dashboard developed using Microsoft Power BI**.
+
+The dashboard analyses employee data to understand workforce characteristics and employee attrition. It provides an interactive view of employee demographics, departments, job roles, salary levels, job satisfaction, experience and other HR-related factors.
+
+The project was developed as a portfolio/learning project to demonstrate practical skills in **Power BI, data analysis, data visualisation and business-focused reporting**.
+
+---
+
+## Business Problem
+
+Employee attrition can affect recruitment costs, workforce stability and business performance.
+
+The purpose of this dashboard is to help HR teams explore employee data and identify patterns associated with employee attrition.
+
+The dashboard provides an interactive way to analyse:
+
+- Overall employee attrition
+- Employee demographics
+- Department-level attrition
+- Salary levels
+- Job roles
+- Job satisfaction
+- Employee experience
+- Overtime
+- Age groups
+- Gender distribution
+
+---
+
+##  Business Questions
+
+This dashboard was designed to answer the following business questions:
+
+1. What is the overall employee attrition rate?
+
+2. How many employees are currently active?
+
+3. How many employees have left the organisation?
+
+4. Which departments have the highest employee attrition?
+
+5. How does attrition vary across different salary levels?
+
+6. Which job roles have higher levels of employee attrition?
+
+7. Is there a relationship between job satisfaction and employee attrition?
+
+8. How does employee attrition vary across different age groups?
+
+9. How does attrition differ between male and female employees?
+
+10. Does employee experience appear to be associated with attrition?
+
+11. How does employee overtime status relate to attrition?
+
+12. What patterns in the workforce could be useful for HR retention analysis?
+
+---
+
+##  Dashboard Features
+
+The Power BI dashboard contains several interactive visuals and KPIs, including:
+
+### KPI Cards
+
+- Total Employees
+- Active Employees
+- Attrition Count
+- Attrition Rate
+- Average Age
+- Average Experience
+
+### Interactive Visualisations
+
+- Attrition by Department
+- Attrition by Salary Slab
+- Attrition by Job Role and Job Satisfaction
+- Age Group Distribution
+- Attrition by Gender
+- Attrition Trend by Experience
+- Department filter
+- Age Group filter
+
+### Additional Analysis
+
+The dashboard also includes an analysis of:
+
+- Attrition Rate by Department
+- Attrition Rate by Overtime
+
+---
+
+## 🛠️ Tools & Technologies
+
+- **Microsoft Power BI**
+- **DAX**
+- **Power Query**
+- **Data Visualisation**
+- **Data Analysis**
+- **Interactive Dashboard Design**
+
+---
+
+##  Dataset
+
+The project uses an HR employee attrition dataset containing information such as:
+
+- Employee ID
+- Age
+- Gender
+- Department
+- Job Role
+- Job Satisfaction
+- Monthly Income
+- Salary Slab
+- Years at Company
+- Total Working Years
+- Overtime
+- Attrition
+- Education
+- Business Travel
+- Job Level
+- Performance Rating
+
+The dataset is used for analytical and educational purposes.
+
+> Note: The dataset's `MonthlyIncome` field is treated as a numerical income variable. The original dataset does not explicitly define a currency, so currency-specific interpretations should not be assumed without additional documentation.
+
+---
+
+## 📈 Key Metrics
+
+The dashboard includes the following main metrics:
+
+| Metric | Description |
+|---|---|
+| Total Employees | Total number of employees in the dataset |
+| Active Employees | Employees whose Attrition value is "No" |
+| Attrition Count | Number of employees whose Attrition value is "Yes" |
+| Attrition Rate | Percentage of employees who left the organisation |
+| Average Age | Average age of employees |
+| Average Experience | Average years of experience/company tenure |
+
+---
+
+##  DAX
+
+Example attrition rate measure used in the dashboard:
+
+```DAX
+Attrition Rate =
+DIVIDE(
+    CALCULATE(
+        COUNTROWS('HR_Analytics-4'),
+        'HR_Analytics-4'[Attrition] = "Yes"
+    ),
+    COUNTROWS('HR_Analytics-4'),
+    0
+)
+```
+
+This measure calculates the proportion of employees whose `Attrition` value is `"Yes"`.
+
+---
+
+##  Dashboard Preview
+
+Add a screenshot of the completed Power BI dashboard here.
+
+Example:
+
+![HR Analytics Dashboard](images/dashboard.png)
+
+---
+
+## Project Learning Outcomes
+
+Through this project, I developed practical experience in:
+
+- Creating interactive Power BI dashboards
+- Creating KPI cards
+- Building charts and visualisations
+- Creating DAX measures
+- Analysing employee attrition
+- Using filters and slicers
+- Comparing HR metrics across departments
+- Turning raw employee data into business-focused insights
+- Designing a dashboard for portfolio presentation
+
+---
+
+##  Future Improvements
+
+Possible future improvements include:
+
+- Adding additional HR KPIs
+- Creating a dedicated executive summary page
+- Adding more advanced DAX measures
+- Adding employee retention analysis
+- Creating drill-through pages for individual departments
+- Adding more detailed overtime and job-role analysis
+- Improving dashboard accessibility and navigation
+
+---
+
+##  Author
+
+**Jobanpreet Singh**
+
+BSc Data Analytics Student  
+De Montfort University, Leicester
+
+### Skills Demonstrated
+
+- Power BI
+- DAX
+- Data Analysis
+- Data Visualisation
+- Excel
+- SQL
+- Python
+
+---
